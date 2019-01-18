@@ -7,6 +7,8 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import com.techprimers.springbootwebsocketexample.model.UserResponse;
 import com.techprimers.springbootwebsocketexample.model.User;
 import com.techprimers.springbootwebsocketexample.model.DialogFlowModel;
+import com.techprimers.springbootwebsocketexample.model.FulfillmentMessages;
+import com.techprimers.springbootwebsocketexample.model.Text;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

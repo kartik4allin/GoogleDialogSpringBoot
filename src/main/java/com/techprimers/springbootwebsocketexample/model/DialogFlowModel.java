@@ -24,6 +24,10 @@ public class DialogFlowModel {
         return source;
     }
 
+    public String getFulfillmentMessages() {
+        return fulfillmentMessages;
+    }
+
 
 }
 

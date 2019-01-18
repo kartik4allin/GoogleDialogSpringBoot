@@ -25,7 +25,7 @@ public class GoogleDialogFlowController {
    public DialogFlowModel receiveDatafromDialogflow() {
     System.out.println("inside receiveDatafromDialogflow !!!!");
      template.convertAndSend("/topic/user", new UserResponse("data from google dialog flow"));
-      return new DialogFlowModel("hi");
+      return new DialogFlowModel("hi",new FulfillmentMessages(new Text({"Text is coming from webhook Heroku.Adding channel"})));
 
       // return res.json({
       //       "fulfillmentText": "",

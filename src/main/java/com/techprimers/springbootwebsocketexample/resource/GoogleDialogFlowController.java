@@ -5,6 +5,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import com.techprimers.springbootwebsocketexample.model.UserResponse;
+import com.techprimers.springbootwebsocketexample.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,10 +21,10 @@ public class GoogleDialogFlowController {
 
 
    @RequestMapping(value = "/webhookSpringBoot",produces = "application/json")
-   public String receiveDatafromDialogflow() {
+   public User receiveDatafromDialogflow() {
     System.out.println("inside receiveDatafromDialogflow !!!!");
      template.convertAndSend("/topic/user", new UserResponse("data from google dialog flow"));
-      return "Hello World";
+      return new User("Hello World");
 
       // return res.json({
       //       "fulfillmentText": "",

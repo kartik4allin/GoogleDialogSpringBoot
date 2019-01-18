@@ -27,7 +27,8 @@ public class GoogleDialogFlowController {
    public DialogFlowModel receiveDatafromDialogflow() {
     System.out.println("inside receiveDatafromDialogflow !!!!");
      template.convertAndSend("/topic/user", new UserResponse("data from google dialog flow"));
-      return new DialogFlowModel("hi",new FulfillmentMessages(new Text()));
+     String[] textmessage = {"Text is coming from spring boot websocket Heroku.Adding channel"};
+      return new DialogFlowModel("hi",new FulfillmentMessages[0](new Text(textmessage)));
 
       // return res.json({
       //       "fulfillmentText": "",

@@ -4,14 +4,14 @@ public class DialogFlowModel {
 
     private String fulfillmentText;
 
-    private FulfillmentMessages fulfillmentMessages;
+    private FulfillmentMessages[] fulfillmentMessages;
 
     private String source="googledilagoueapp";
 
     public DialogFlowModel() {
     }
 
-    public DialogFlowModel(String fulfillmentText,FulfillmentMessages fulfillmentMessages) {
+    public DialogFlowModel(String fulfillmentText,FulfillmentMessages[] fulfillmentMessages) {
         this.fulfillmentText = fulfillmentText;
         this.fulfillmentMessages=fulfillmentMessages;
     }
@@ -24,7 +24,7 @@ public class DialogFlowModel {
         return source;
     }
 
-    public FulfillmentMessages getFulfillmentMessages() {
+    public FulfillmentMessages[] getFulfillmentMessages() {
         return fulfillmentMessages;
     }
 

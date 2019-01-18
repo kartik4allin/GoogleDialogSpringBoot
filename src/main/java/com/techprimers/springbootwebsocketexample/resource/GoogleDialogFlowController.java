@@ -19,10 +19,24 @@ public class GoogleDialogFlowController {
   SimpMessagingTemplate template;
 
 
-   @RequestMapping(value = "/webhookSpringBoot")
+   @RequestMapping(value = "/webhookSpringBoot",produces = "application/json")
    public String receiveDatafromDialogflow() {
     System.out.println("inside receiveDatafromDialogflow !!!!");
      template.convertAndSend("/topic/user", new UserResponse("data from google dialog flow"));
       return "Hello World";
+
+      // return res.json({
+      //       "fulfillmentText": "",
+      //       "fulfillmentMessages": [
+      //           {
+      //             "text": {
+      //               "text": [
+      //                   "Text is coming from webhook Heroku.Adding channel "+channel+"and the price is "+temp_min
+      //                 ]
+      //               }
+      //           }
+      //         ],
+      //       source: "googledilagoueapp"
+      //     });
    }
 }

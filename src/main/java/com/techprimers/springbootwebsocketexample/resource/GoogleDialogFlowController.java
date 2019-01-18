@@ -3,6 +3,7 @@ package com.techprimers.springbootwebsocketexample.resource;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import com.techprimers.springbootwebsocketexample.model.UserResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -22,7 +22,7 @@ public class GoogleDialogFlowController {
 
 
    @RequestMapping(value = "/webhookSpringBoot",produces = "application/json")
-   public User receiveDatafromDialogflow() {
+   public DialogFlowModel receiveDatafromDialogflow() {
     System.out.println("inside receiveDatafromDialogflow !!!!");
      template.convertAndSend("/topic/user", new UserResponse("data from google dialog flow"));
       return new DialogFlowModel("hi");

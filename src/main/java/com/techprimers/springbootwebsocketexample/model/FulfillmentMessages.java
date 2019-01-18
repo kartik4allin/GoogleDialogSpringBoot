@@ -13,7 +13,7 @@ public class FulfillmentMessages {
         this.text = text;
     }
 
-    public String getText() {
+    public Text getText() {
         return text;
     }
 

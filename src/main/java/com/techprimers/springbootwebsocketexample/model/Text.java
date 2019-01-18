@@ -7,7 +7,7 @@ public class Text {
     public Text() {
     }
 
-    public FulfillmentMessages(String[] text) {
+    public Text(String[] text) {
         this.text = text;
     }
 

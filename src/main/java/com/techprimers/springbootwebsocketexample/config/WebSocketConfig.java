@@ -18,7 +18,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
                 //.withSockJS();
 
     RequestUpgradeStrategy upgradeStrategy = new TomcatRequestUpgradeStrategy();
-    stompEndpointRegistry.addEndpoint("/hello")
+    stompEndpointRegistry.addEndpoint("/websocket-example")
     .setHandshakeHandler(new DefaultHandshakeHandler(upgradeStrategy))
     .setAllowedOrigins("*");
     }

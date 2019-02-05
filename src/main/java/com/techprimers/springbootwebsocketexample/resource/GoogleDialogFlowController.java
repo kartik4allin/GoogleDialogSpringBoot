@@ -25,8 +25,8 @@ public class GoogleDialogFlowController {
 
    @RequestMapping(value = "/webhookSpringBoot",produces = "application/json")
    public DialogFlowModel receiveDatafromDialogflow() {
-    System.out.println("inside receiveDatafromDialogflow !!!!");
-     template.convertAndSend("/topic/messages", new UserResponse("data from google dialog flow"));
+    System.out.println("Added new topic for GDF !!!!");
+     template.convertAndSend("/topic/messages", "This message is comming from GoogleDialogflowCOntroller");
      String[] textmessage = {"Text is coming from spring boot websocket Heroku.Adding channel"};
     FulfillmentMessages[] fullfillmentMessage =new FulfillmentMessages[1];
      fullfillmentMessage[0] =new FulfillmentMessages(new Text(textmessage));

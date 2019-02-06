@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import javax.json.JsonObject;
+import javax.json.Json;
 
 
 
@@ -26,7 +28,11 @@ public class GoogleDialogFlowController {
    @RequestMapping(value = "/webhookSpringBoot",produces = "application/json")
    public DialogFlowModel receiveDatafromDialogflow() {
     System.out.println("Added new text for GDF !!!!@@@@");
-     template.convertAndSend("/topic/messages", JSON.stringify({ 'from':'GDF'});
+    JsonObject value = Json.createObjectBuilder()
+    .add("firstName", "John")
+    .add("lastName", "Smith").build();
+      System.out.println("JsonObject Object created i Java "+value);
+     template.convertAndSend("/topic/messages", "");
      String[] textmessage = {"Text is coming from spring boot websocket Heroku.Adding channel"};
     FulfillmentMessages[] fullfillmentMessage =new FulfillmentMessages[1];
      fullfillmentMessage[0] =new FulfillmentMessages(new Text(textmessage));

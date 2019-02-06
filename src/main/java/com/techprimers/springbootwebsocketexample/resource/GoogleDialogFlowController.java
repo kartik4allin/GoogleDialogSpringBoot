@@ -29,10 +29,10 @@ public class GoogleDialogFlowController {
    public DialogFlowModel receiveDatafromDialogflow() {
     System.out.println("Added new text for GDF !!!!@@@@");
     JsonObject value = Json.createObjectBuilder()
-    .add("firstName", "John")
-    .add("lastName", "Smith").build();
+    .add("from", "John")
+    .add("text", "Smith").build();
       System.out.println("JsonObject Object created i Java "+value);
-     template.convertAndSend("/topic/messages", "");
+     template.convertAndSend("/topic/messages", value);
      String[] textmessage = {"Text is coming from spring boot websocket Heroku.Adding channel"};
     FulfillmentMessages[] fullfillmentMessage =new FulfillmentMessages[1];
      fullfillmentMessage[0] =new FulfillmentMessages(new Text(textmessage));

@@ -6,6 +6,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
+import org.springframework.messaging.Message;
 
 @Controller
 public class UserController {
@@ -19,8 +20,8 @@ public class UserController {
     // }
 
     @MessageMapping("/websocket-example/fromclient")
-    public void getMessageFromClient() {
-     System.out.println("Inside getMessageFromClientIS CLALED!!!!!!!!!!!!");
+    public void getMessageFromClient(Message  message ) {
+     System.out.println("Inside getMessageFromClientIS CLALED!!!!!!!!!!!!"+message);
 
     }
 }

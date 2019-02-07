@@ -11,10 +11,16 @@ import org.springframework.stereotype.Controller;
 public class UserController {
 
 
-    @MessageMapping("/websocket-example/{topic}")
-    @SendTo("/topic/messages")
-    public UserResponse getUser(@DestinationVariable("topic") String topic,User user) {
-     System.out.println("Inside USERCONTROLLER MESSAGEMAPPING IS CLALED!!!!!!!!!!!!");
-        return new UserResponse("Hi " + user.getName());
+    // @MessageMapping("/websocket-example/{topic}")
+    // @SendTo("/topic/messages")
+    // public UserResponse getUser(@DestinationVariable("topic") String topic,User user) {
+    //  System.out.println("Inside USERCONTROLLER MESSAGEMAPPING IS CLALED!!!!!!!!!!!!"+topic);
+    //     return new UserResponse("Hi " + user.getName());
+    // }
+
+    @MessageMapping("/websocket-example/fromclient")
+    public void getMessageFromClient() {
+     System.out.println("Inside getMessageFromClientIS CLALED!!!!!!!!!!!!");
+
     }
 }

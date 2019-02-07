@@ -20,8 +20,8 @@ public class UserController {
     // }
 
     @MessageMapping("/websocket-example/fromclient")
-    public void getMessageFromClient(Message  message ) {
-    String text=(String)message.getPayload();
+    public void getMessageFromClient(String  text ) {
+    // String text=(String)message.getPayload();
      System.out.println("Inside getMessageFromClientIS CLALED!!!!!!!!!!!!"+text);
 
     }
